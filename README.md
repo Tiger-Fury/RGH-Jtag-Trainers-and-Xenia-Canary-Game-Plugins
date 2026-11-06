@@ -1,52 +1,80 @@
-<h1 align="center">Viper Re-ignited Multi-Game Xbox 360 Trainer</h1>
+<h1 align="center">Viper Reignited Multi-Game Xbox 360 Trainer</h1>
 
-Hello this is a my ~~ ~~revamped~~ ~~ Xbox 360 (RGH/Jtag) "Viper" Multi-Game Trainer which i ended suppport for in 2015, 10 years on and now we have the greatness which is xenia. 
+Viper Reignited is a multi-game trainer for **Xbox 360 RGH/JTAG consoles** and **Xenia Canary**.
 
-I first Released this in
+I originally ended support for the Viper trainer in 2015, then revived it in January 2025 as Viper Reignited. As of November 2026, it has grown beyond a revamp: it now uses a **brand-new trainer engine built from the ground up**.
 
-~~ ~~I have started developing this again "Viper Re-ignited" this is to support not only xenia emulator but also an RGH/Jtag.~~ ~~
-## Update
+Existing engines had limitations and oversights that made developing new trainers more difficult. Although I wrote workarounds, they still depended on the same underlying backend. This new engine addresses those problems directly, with:
 
-I have been told by several people that sometimes the Hashes don't match there games so going forward, I will only be providing a template for the plugin.toml file that you need to edit in Notepad and add your own hash
+- Improved checks and game detection.
+- More reliable pattern scanning.
+- Improved code cave injections.
+- A custom trainer UI that removes the usual reliance on system menus.
 
-## RGH/Jtag
+On Xenia, the system keyboard UI remains available as a fallback if game code changes prevent the custom UI from working.
 
-On a RGH/Jtag it will be the usual load the trainer.xex by opening the Trainer_loader.xex and this will load it into memory
+## Game Compatibility
 
-## Xenia canary
-Currently I'm providing patches for the games and versions i use, you may have to get your own hashs from the xenia.log file.
-Xenia Handles plugin patches this way so until Global Plugins are added, then the trainer.xex must have a plugins.toml file beside it per game and/or per title update basis. These Patches must be in its own title id folder within the main plugin so the structure currently is like this 
+The trainers scan for and adapt to game code, reducing the need for separate versions for each **Media ID** or **Title Update**. Compatibility still depends on the trainer finding the code it needs.
 
-* Xenia/plugins/Yourgametitleid/plugins.toml
+Your game must have a supported **Title ID**. Some games, such as Gears of War 2, have releases with different Title IDs.
 
-Change this ---------- ^ to your title id (if supported)
+See the [Supported Game List](https://github.com/Tiger-Fury/Xenia-Canary-Game-Plugins/blob/main/Supported%20Games.txt).
 
-and the Trainer.xex must also be in the same folder as the plugins.toml file.
+## Xbox 360 — RGH/JTAG
 
+Launch `Trainer_loader.xex` to load `trainer.xex` into memory, then start a supported game.
 
-## Trainers
+## Xenia Canary
 
-My Trainers scan and adjust there own code which eliminates the need for you to have 
-* matching media id
-* specific Title updates. 
+Use a [Xenia Canary build](https://github.com/xenia-canary/xenia-canary-releases/releases) from **1 January 2025 or later**.
 
-the only requirements is having  
+Each game requires a `plugins.toml` configuration containing the correct module hash for your copy of the game. Different releases or Title Updates may require different hashes.
 
-* Matching Title ID (rare but a few games have different title id's like gears 2) [Supported Game List](https://github.com/Tiger-Fury/Xenia-Canary-Game-Plugins/blob/main/Supported%20Games.txt)
-* Xenia Canary [build](https://github.com/xenia-canary/xenia-canary-releases/releases) from 1st January 2025 onwards (Supports Passcode UI)
-* Your matching hash code (Found in xenia log after launching your game and closing xenia look for "Module Hash:" in the log)
+Because supplied hashes do not always match everyone's games, I now provide a **configuration template** for you to edit.
 
-currently my trainers use Passcode ui but i'm likely going to change this to keyboard ui instead to make it easier for users of xenia.
+### Installation
+
+Place `plugins.toml` and `trainer.xex` together inside a folder named after your game's Title ID:
+
+```text
+Xenia/
+└── plugins/
+    └── YOUR_TITLE_ID/
+        ├── plugins.toml
+        └── trainer.xex
+```
+
+Replace `YOUR_TITLE_ID` with your supported game's Title ID.
+
+### Finding Your Module Hash
+
+1. Launch your game in Xenia Canary.
+2. Close Xenia.
+3. Open `xenia.log` and search for `Module Hash:`.
+4. Open the supplied `plugins.toml` template in Notepad.
+5. Enter your game's module hash in the corresponding field and save the file.
+
+Repeat this if you change to a game version or Title Update with a different module hash.
 
 ## Usage
 
-place the plugins in the correct folders (structure shown above) and once in game you can activate the Trainer by press Dpad up + Back Button or alternatively you can use Dpad up + start button. 
-If you are using xenia it will display a list of codes you can activate and use the drop down menu to correspond with the correct keys to active the cheats you want. On Xbox (RGH/Jtag) when the menu appear input the code Dpad Down x 4 to list all codes available.
+While in a supported game, open the trainer using either:
 
-## How will you know if the trainer is loaded?
+- **D-pad Up + Back**
+- **D-pad Up + Start**
 
-Once the Trainer has loaded into memory a Notification will pop up saying "Viper Re-ignited Trainer Loaded" on Xbox this help pop up immediately after loading the trainer, on xenia this will happen when you load the game. If you have a Matching Title ID that is supported by this Trainer then another notication will pop up when you load the game has loaded displaying the titles name.
+Use the trainer menu to view and activate the available cheats.
 
-## How often will i update this?
+## How Do I Know the Trainer Has Loaded?
 
-I will update this whenever I can, I also have a full time job and run a YouTube Channel so updates will come here and there
+A notification reading **“Viper Re-ignited Trainer Loaded”** confirms that the trainer is in memory.
+
+- **Xbox 360:** This appears after loading the trainer.
+- **Xenia:** This appears when you launch the game.
+
+When the trainer detects a supported game, a second notification displays the game's name.
+
+## Updates
+
+I update Viper Reignited whenever I can. I also work full-time and run a YouTube channel, so there is no fixed release schedule.
