@@ -20,7 +20,7 @@ The trainers scan for and adapt to game code, reducing the need for separate ver
 
 Your game must have a supported **Title ID**. Some games, such as Gears of War 2, have releases with different Title IDs.
 
-See the [Supported Game List](https://github.com/Tiger-Fury/Xenia-Canary-Game-Plugins/blob/main/Supported%20Games.txt).
+See the [Supported Game List](Supported%20Games.md).
 
 ## Xbox 360 — RGH/JTAG
 
