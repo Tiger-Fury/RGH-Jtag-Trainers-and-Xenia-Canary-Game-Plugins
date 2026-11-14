@@ -9,4 +9,4 @@ Use the Title ID to match your game to its trainer or Xenia Canary plugin folder
 | [Crysis](games/45410968.md) | `45410968` | `4F4EA672` | TU0 |
 | [Dead Island](games/4B4D07DF.md) | `4B4D07DF` | `2BCF9BDE` | All |
 | [Silent Hill: Homecoming](games/4B4E07E5.md) | `4B4E07E5` | `7F02C49C` | TU0 |
-| [Tenchu Z](games/465307D7.md) | `465307D7` | Unrecorded | Unrecorded |
+| [Tenchu Z](games/465307D7.md) | `465307D7` | `7A0ADB06` | TU0 |
