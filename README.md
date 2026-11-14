@@ -9,7 +9,7 @@ Existing engines had limitations and oversights that made developing new trainer
 - Improved checks and game detection.
 - More reliable pattern scanning.
 - Improved code cave injections.
-- A custom trainer UI that removes the usual reliance on system menus.
+- A custom toggle trainer UI with a fallback to Keyboard system menus if an error occurs (Permanent fallback in Xenia) .
 - Many other fixes
 
 On Xenia, the system keyboard UI remains available as a fallback if game code changes prevent the custom UI from working.
