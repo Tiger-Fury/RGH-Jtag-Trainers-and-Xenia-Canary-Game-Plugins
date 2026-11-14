@@ -63,7 +63,7 @@ Repeat this if you change to a game version or Title Update with a different mod
 While in a supported game, open the trainer using either:
 
 - **D-pad Up + Back**
-- **D-pad Up + Start**
+- **Back + Start**
 
 Use the trainer menu to view and activate the available cheats.
 
